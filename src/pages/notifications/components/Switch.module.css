@@ -1,0 +1,30 @@
+/* Switch.module.css */
+.toggle-switch {
+  width: 60px;
+  height: 30px;
+  background-color: #D54E4E;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.switch-handle {
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+/* Adjust the translate values below to control the left and right movement */
+.toggle-switch.checked .switch-handle {
+  transform: translate(30px, -50%); /* Adjusted the value for right movement */
+}
+
+.toggle-switch:not(.checked) .switch-handle {
+  transform: translate(1px, -50%); /* Adjusted the value for left movement */
+}
+
