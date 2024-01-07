@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.10",
-    "@types/lodash.debounce": "^4.0.7",
+    "@types/lodash.debounce": "^4.0.9",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "autoprefixer": "^10.4.13",
     "cypress": "^13.3.1",
