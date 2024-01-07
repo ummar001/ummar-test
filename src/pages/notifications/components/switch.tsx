@@ -39,7 +39,6 @@ const StyledTextField = ({ value, onClick, placeholder }: { value?: string; onCl
   <TextField
     value={value}
     onClick={onClick}
-    placeholder={placeholder}
     style={{
       backgroundColor: '#ECEEF1',
       border: '1px solid gray',
@@ -48,7 +47,9 @@ const StyledTextField = ({ value, onClick, placeholder }: { value?: string; onCl
       marginTop: '-10px',
       width: '100%',
       height: '75%',
+      paddingLeft: '15px', // Add left padding to make room for the placeholder
     }}
+    InputProps={{ placeholder: placeholder }}
   />
 );
 

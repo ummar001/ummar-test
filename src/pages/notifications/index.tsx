@@ -337,7 +337,7 @@ const Notification: FunctionComponent = () => {
           </Stack>
 
           <Stack width={{ xs: '100%', sm: 'auto' }} gap={2}>
-            {sendOption === 'schedule' && (
+            {/* {sendOption === 'schedule' && (
               <LocalizationProvider dateAdapter={AdapterDateFns}>
                 <Stack>
                   <Typography variant="subtitle1" sx={{ marginTop: 3 }}>
@@ -353,7 +353,7 @@ const Notification: FunctionComponent = () => {
                   />
                 </Stack>
               </LocalizationProvider>
-            )}
+            )} */}
           </Stack>
 
           <Stack width={{ xs: '100%', sm: 'auto' }} gap={2}>
