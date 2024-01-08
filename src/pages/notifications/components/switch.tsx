@@ -4,6 +4,7 @@ import styles from '../components/Switch.module.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import TextField from '@mui/material/TextField';
+import InputLabel from '@mui/material/InputLabel';
 
 const ToggleSwitch = ({ onToggle }: { onToggle: (isChecked: boolean) => void }) => {
   const [isSwitchChecked, setSwitchChecked] = useState(false);
@@ -35,22 +36,35 @@ const ToggleSwitch = ({ onToggle }: { onToggle: (isChecked: boolean) => void }) 
 };
 
 // Define a custom styled TextField component
-const StyledTextField = ({ value, onClick, placeholder }: { value?: string; onClick?: () => void; placeholder?: string }) => (
-  <TextField
-    value={value}
-    onClick={onClick}
-    style={{
-      backgroundColor: '#ECEEF1',
-      border: '1px solid gray',
-      borderRadius: '60px',
-      borderColor: '#ECEEF1',
-      marginTop: '-10px',
-      width: '100%',
-      height: '75%',
-      paddingLeft: '15px', // Add left padding to make room for the placeholder
-    }}
-    InputProps={{ placeholder: placeholder }}
-  />
-);
-
-export default ToggleSwitch;
+const StyledTextField = ({
+  value,
+  onClick,
+  placeholder,
+}: {
+  value?: string
+  onClick?: () => void
+  placeholder?: string
+}) => (
+  <div align="center">
+    <InputLabel shrink={!value} htmlFor="custom-textfield">
+      <em>YYYY/MM/DD - 23:59</em>
+    </InputLabel>
+    <TextField
+      id="custom-textfield"
+      value={value}
+      onClick={onClick}
+      inputProps={{
+        style: {
+          backgroundColor: '#ECEEF1',
+          border: '1px solid gray',
+          borderRadius: '60px',
+          borderColor: '#ECEEF1',
+          marginTop: '-10px',
+          width: '100%',
+          height: '75%',
+        },
+      }}
+    />
+  </div>
+)
+export default ToggleSwitch

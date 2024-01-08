@@ -1,4 +1,4 @@
-/* Switch.module.css */
+
 .toggle-switch {
   width: 60px;
   height: 30px;
@@ -27,4 +27,3 @@
 .toggle-switch:not(.checked) .switch-handle {
   transform: translate(1px, -50%); /* Adjusted the value for left movement */
 }
-

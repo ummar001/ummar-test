@@ -96,6 +96,7 @@ const Notification: FunctionComponent = () => {
               <Select
                 onChange={handleStoreChange}
                 value={selectedStore}
+                displayEmpty                
                 sx={{
                   width: '75%',
                   borderRadius: 10,
@@ -104,11 +105,12 @@ const Notification: FunctionComponent = () => {
                   color: 'black',
                   fontSize: 16,
                   border: 'none',
-                  outline: 'none',
+                  
                 }}
               >
-                <MenuItem value="" disabled></MenuItem>
-                <MenuItem value="all">All Stores</MenuItem>
+                <MenuItem value="" disabled><em>All stores</em></MenuItem>
+                
+                
                 {stores &&
                   stores.map((store) => (
                     <MenuItem key={store.id} value={store.id}>
@@ -125,6 +127,7 @@ const Notification: FunctionComponent = () => {
               <Select
                 onChange={handleSchemeChange}
                 value={selectedScheme}
+                displayEmpty
                 sx={{
                   width: '75%',
                   borderRadius: 10,
@@ -136,7 +139,7 @@ const Notification: FunctionComponent = () => {
                   outline: 'none',
                 }}
               >
-                <MenuItem value="" disabled></MenuItem>
+                <MenuItem value="" disabled><em>loyalty System</em></MenuItem>
                 <MenuItem value="stamps">Stamps</MenuItem>
                 <MenuItem value="points">Points</MenuItem>
                 {/* Add other scheme options as needed */}
@@ -207,6 +210,7 @@ const Notification: FunctionComponent = () => {
               <Select
                 onChange={handleProductInteractionChange}
                 value={selectedProductInteraction}
+                displayEmpty
                 sx={{
                   width: '100%',
                   borderRadius: 10,
@@ -219,8 +223,8 @@ const Notification: FunctionComponent = () => {
                   outline: 'none',
                 }}
               >
-                <MenuItem value="" disabled></MenuItem>
-                <MenuItem value="all">All Stores</MenuItem>
+                <MenuItem value="" disabled><em>All stores</em></MenuItem>
+                <MenuItem value="all"></MenuItem>
                 {stores &&
                   stores.map((store) => (
                     <MenuItem key={store.id} value={store.id}>
@@ -251,6 +255,7 @@ const Notification: FunctionComponent = () => {
                 <Select
                   onChange={handleLastInteractionChange}
                   value={lastInteraction}
+                  displayEmpty
                   sx={{
                     width: '100%',
                     borderRadius: 10,
@@ -264,7 +269,7 @@ const Notification: FunctionComponent = () => {
                   }}
                 >
                   <MenuItem value="" disabled>
-                    Select last interaction
+                    <em>Select last interaction</em>
                   </MenuItem>
                   <MenuItem value="last30days">Last 30 days</MenuItem>
                   <MenuItem value="lasttwoweeks">Last two weeks</MenuItem>
@@ -279,6 +284,7 @@ const Notification: FunctionComponent = () => {
                 <Select
                   onChange={handleActiveCancelledChange}
                   value={selectedActiveCancelled}
+                  displayEmpty
                   sx={{
                     width: '100%',
                     borderRadius: 10,
@@ -291,7 +297,7 @@ const Notification: FunctionComponent = () => {
                     outline: 'none',
                   }}
                 >
-                  <MenuItem value="" disabled></MenuItem>
+                  <MenuItem value="" disabled><em>Please choose</em></MenuItem>
                   <MenuItem value="active">Active</MenuItem>
                   <MenuItem value="cancelled">Cancelled</MenuItem>
                 </Select>
